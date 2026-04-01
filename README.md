@@ -1,19 +1,23 @@
-# GoodDeeds App
+#  GoodDeeds App
 
 GoodDeeds is a Flutter + Firebase social volunteering platform where people can discover community events, join activities, earn points, and share their impact through posts. Organizers can create and manage events, track participants, and mark attendance.
 
-## What This App Does
+## 🔗 Repository
 
-- User registration and login with Firebase Authentication
-- Role-based flow: Volunteer user or Organizer
-- Event discovery feed with event details
-- Join and leave events with automatic point and volunteer count updates
-- Organizer dashboard to create, manage, and delete events
-- Participant attendance management (present/absent)
-- Community feed with posts, likes, comments, and follow/unfollow
-- Profile and edit profile (name, image URL, bio)
+- GitHub: https://github.com/uditha-ramanayake/gooddeeds_app1.git
 
-## Built With
+## ✨ What This App Does
+
+- 🔐 User registration and login with Firebase Authentication
+- 👥 Role-based flow: Volunteer user or Organizer
+- 📅 Event discovery feed with event details
+- ✅ Join and leave events with automatic point and volunteer count updates
+- 🧭 Organizer dashboard to create, manage, and delete events
+- 📝 Participant attendance management (present/absent)
+- 💬 Community feed with posts, likes, comments, and follow/unfollow
+- 🙍 Profile and edit profile (name, image URL, bio)
+
+## 🛠️ Built With
 
 - Flutter (Dart)
 - Firebase Core
@@ -22,7 +26,7 @@ GoodDeeds is a Flutter + Firebase social volunteering platform where people can 
 - Firebase Storage (dependency added)
 - Image Picker (dependency added)
 
-## Project Structure
+## 🗂️ Project Structure
 
 ```
 lib/
@@ -52,9 +56,9 @@ lib/
 		firebase_service.dart
 ```
 
-## User Journeys
+## 🚀 User Journeys
 
-### Volunteer Flow
+### 🙋 Volunteer Flow
 
 1. Open app -> Welcome
 2. Register or login
@@ -64,7 +68,7 @@ lib/
 6. Open My Events to track/joined items and leave events if needed
 7. Visit Profile and Community to edit profile, post updates, and interact
 
-### Organizer Flow
+### 🧑‍💼 Organizer Flow
 
 1. Login
 2. Choose role (Organizer)
@@ -74,9 +78,9 @@ lib/
 6. Mark attendance
 7. Delete events when needed
 
-## Firestore Collections Used
+##  Firestore Collections Used
 
-### users
+### 👤 users
 
 - Stores user profile and role data
 - Common fields:
@@ -87,7 +91,7 @@ lib/
 	- profileImage
 	- bio
 
-### events
+### 📌 events
 
 - Stores all event records
 - Common fields:
@@ -101,7 +105,7 @@ lib/
 	- creatorId
 	- createdAt
 
-### user_events
+### 🤝 user_events
 
 - Relationship collection between users and events
 - Used for joined status and attendance
@@ -114,7 +118,7 @@ lib/
 	- joinedAt
 	- attendance (pending, attended, absent)
 
-### posts
+### 📰 posts
 
 - Community posts
 - Common fields:
@@ -124,7 +128,7 @@ lib/
 	- timestamp
 	- likedBy (array of user ids)
 
-### posts/{postId}/comments
+### 💭 posts/{postId}/comments
 
 - Comment subcollection for each post
 - Common fields:
@@ -132,7 +136,7 @@ lib/
 	- text
 	- timestamp
 
-### followers
+### 🔔 followers
 
 - Follow relationships in community
 - Common fields:
@@ -140,24 +144,24 @@ lib/
 	- followingId
 	- timestamp
 
-## Local Setup
+## ⚙️ Local Setup
 
-### Prerequisites
+### ✅ Prerequisites
 
 - Flutter SDK installed
 - Dart SDK (bundled with Flutter)
 - Android Studio or VS Code
 - Firebase project configured
 
-### 1) Clone and install
+### 1) 📥 Clone and install
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/uditha-ramanayake/gooddeeds_app1.git
 cd gooddeeds_app-main
 flutter pub get
 ```
 
-### 2) Configure Firebase
+### 2) 🔥 Configure Firebase
 
 This project already contains Android Firebase config at:
 
@@ -168,7 +172,7 @@ For full multi-platform support, also add platform-specific Firebase config file
 - Authentication (Email/Password)
 - Cloud Firestore
 
-### 3) Run the app
+### 3) ▶️ Run the app
 
 ```bash
 flutter run -d windows
@@ -176,7 +180,7 @@ flutter run -d windows
 
 You can replace windows with your target device id.
 
-## Useful Commands
+## 🧪 Useful Commands
 
 ```bash
 flutter pub get
@@ -185,14 +189,14 @@ flutter test
 flutter run -d windows
 ```
 
-## Current Notes
+## 📌 Current Notes
 
 - Analyzer currently reports clean: no issues found.
 - Role is selected after login and persisted in Firestore.
 - Registration currently routes directly to Discover Events after account creation.
 - image_picker and firebase_storage are present in dependencies and can be expanded for file upload flows.
 
-## Known Improvements You Can Add Next
+## 🧭 Known Improvements You Can Add Next
 
 - Add a proper Firestore security rules document
 - Add screenshot section for README visuals
@@ -200,9 +204,9 @@ flutter run -d windows
 - Add unit and widget tests for join/leave and attendance logic
 - Replace image URL input with native image upload using Firebase Storage
 
-## Troubleshooting
+## 🆘 Troubleshooting
 
-### App exits when running flutter run
+### ❗ App exits when running flutter run
 
 If you see a prompt asking to select a device and then quit, run with an explicit device:
 
@@ -210,9 +214,11 @@ If you see a prompt asking to select a device and then quit, run with an explici
 flutter run -d windows
 ```
 
-### Firebase initialization or permission issues
+### 🔐 Firebase initialization or permission issues
 
 - Verify Firebase files are in place
 - Ensure Authentication and Firestore are enabled in Firebase Console
 - Verify Firestore rules allow required reads/writes for your test environment
+
+
 
